@@ -8,6 +8,8 @@ all : backtrace
 backtrace : backtrace.o
 	$(CXX) -rdynamic -o $@ $^
 
+backtrace.o : backtrace.cpp backtrace.hpp
+
 clean :
 	rm -f *.o
 	rm -f backtrace
